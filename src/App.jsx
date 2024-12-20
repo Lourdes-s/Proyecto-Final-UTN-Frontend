@@ -10,7 +10,10 @@ const App = () => {
                 <Route path="/forgot-password" element={<ForgotPasswordScreen/>}/>
                 <Route path="/recovery-password/:reset_token" element={<RecoveryPasswordScreen/>}/>
                 <Route path="/register" element={<RegisterScreen/>}/>
-                <Route path="/chats" element={<ChatsScreen/>}></Route>
+                <Route element={<ProtectedRoute/>}>
+                </Route>
+                    <Route path="/chats" element={<ChatsScreen/>}>
+                </Route>
             </Routes>
         </div>
     )
