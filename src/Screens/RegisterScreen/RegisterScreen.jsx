@@ -20,7 +20,8 @@ const RegisterScreen = () => {
             field_data_props: {
                 type: 'text',
                 id: 'name',
-                name: 'name'
+                name: 'name',
+                placeholder: 'Cosme Fulanito' 
             }
         },
         {
@@ -46,7 +47,6 @@ const RegisterScreen = () => {
                 type: 'password',
                 id: 'password',
                 name: 'password',
-                placeholder: 'Cosme Fulanito' 
             }
         }
     ]
