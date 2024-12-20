@@ -1,6 +1,6 @@
 import React from "react"
 import { Route, Routes } from "react-router-dom"
-import { ChatsScreen, ForgotPasswordScreen, HomeScreen, LoginScreen, RecoveryPasswordScreen, RegisterScreen } from "./Screens"
+import { ChatsScreen, ChatScreen, ForgotPasswordScreen, HomeScreen, LoginScreen, RecoveryPasswordScreen, RegisterScreen } from "./Screens"
 const App = () => {
     return (
         <div className='phone'>
@@ -11,6 +11,7 @@ const App = () => {
                 <Route path="/recovery-password/:reset_token" element={<RecoveryPasswordScreen/>}/>
                 <Route path="/register" element={<RegisterScreen/>}/>
                 <Route path="/chats" element={<ChatsScreen/>}></Route>
+                <Route path='/chat/:contactId' element={<ChatScreen/>}/>
             </Routes>
         </div>
     )
