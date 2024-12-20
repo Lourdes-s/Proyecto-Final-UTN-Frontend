@@ -5,5 +5,6 @@ import RecoveryPasswordScreen from "./RecoveryPasswordScreen/RecoveryPasswordScr
 import RegisterScreen from "./RegisterScreen/RegisterScreen"
 import ChatsScreen from "./ChatsScreen/ChatsScreen"
 import ChatScreen from "./ChatScreen/ChatScreen"
+import ValidateMailScreen from "./ValidateMailScreen/ValidateMailScreen"
 
-export { HomeScreen, LoginScreen, ForgotPasswordScreen, RecoveryPasswordScreen, RegisterScreen, ChatsScreen, ChatScreen }              
+export { HomeScreen, LoginScreen, ForgotPasswordScreen, RecoveryPasswordScreen, RegisterScreen, ChatsScreen, ChatScreen, ValidateMailScreen }              
