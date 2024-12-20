@@ -21,7 +21,7 @@ const RegisterScreen = () => {
                 type: 'text',
                 id: 'name',
                 name: 'name',
-                placeholder: 'Cosme Fulanito' 
+                placeholder: 'CosmeFulanito' 
             }
         },
         {
