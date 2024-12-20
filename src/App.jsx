@@ -1,6 +1,7 @@
 import React from "react"
 import { Route, Routes } from "react-router-dom"
 import { ChatsScreen, ForgotPasswordScreen, HomeScreen, LoginScreen, RecoveryPasswordScreen, RegisterScreen, ValidateMailScreen } from "./Screens"
+import ProtectedRoute from "./Components/ProtectedRoute/ProtectedRoute.jsx"
 const App = () => {
     return (
         <div className='phone'>
