@@ -67,7 +67,7 @@ const LoginScreen = () => {
                 break;
             case 200:
                 sessionStorage.setItem('access-token', data.access_token)
-                navigate('/')
+                navigate('/chats')
                 break;
         }
     }

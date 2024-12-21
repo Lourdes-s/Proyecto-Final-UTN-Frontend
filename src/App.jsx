@@ -11,8 +11,9 @@ const App = () => {
                 <Route path="/verify-email/:validation_token" element={<ValidateMailScreen/>}/>
                 <Route path="/recovery-password/:reset_token" element={<RecoveryPasswordScreen/>}/>
                 <Route path="/register" element={<RegisterScreen/>}/>
+                <Route path="/home" element={<HomeScreen/>}/>                
                 <Route element={<ProtectedRoute/>}>
-                    <Route path="/" element={<ChatsScreen/>}/> 
+                    <Route path="/chats" element={<ChatsScreen/>}/> 
                     <Route path="/chat/:contactId" element={<ChatScreen/>}/>
                 </Route>
             </Routes>
