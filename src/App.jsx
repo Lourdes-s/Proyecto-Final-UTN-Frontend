@@ -1,6 +1,6 @@
 import React from "react"
 import { Route, Routes } from "react-router-dom"
-import { ChatsScreen, ForgotPasswordScreen, HomeScreen, LoginScreen, RecoveryPasswordScreen, RegisterScreen, ValidateMailScreen, ChatScreen } from "./Screens"
+import { ChatsScreen, ForgotPasswordScreen, LoginScreen, RecoveryPasswordScreen, RegisterScreen, ValidateMailScreen, ChatScreen } from "./Screens"
 import ProtectedRoute from "./Components/ProtectedRoute/ProtectedRoute.jsx"
 const App = () => {
     return (
@@ -11,10 +11,9 @@ const App = () => {
                 <Route path="/verify-email/:validation_token" element={<ValidateMailScreen/>}/>
                 <Route path="/recovery-password/:reset_token" element={<RecoveryPasswordScreen/>}/>
                 <Route path="/register" element={<RegisterScreen/>}/>
-                <Route path="/" element={<HomeScreen/>}/>                
                 <Route element={<ProtectedRoute/>}>
-                    <Route path="/chats" element={<ChatsScreen/>}/> 
-                    <Route path="/chat/:contactId" element={<ChatScreen/>}/>
+                    <Route path="/" element={<ChatsScreen/>}/> 
+                    <Route path="/chats/:contactId" element={<ChatScreen/>}/>
                 </Route>
             </Routes>
         </div>

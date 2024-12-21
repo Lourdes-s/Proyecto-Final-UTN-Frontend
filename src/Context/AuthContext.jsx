@@ -17,7 +17,7 @@ export const AuthProvider = ({children}) => {
     const login = (auth_token) => {
         sessionStorage.setItem('access-token', auth_token)
         setIsAuthenticated(true)
-        navigate('/home')
+        navigate('/')
     } 
 
     const logout = () => {

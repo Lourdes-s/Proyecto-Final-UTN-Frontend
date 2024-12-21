@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { Form } from '../../Components'
+import { AuthContext } from '../../Context/AuthContext'
 
 const LoginScreen = () => {
     
@@ -8,7 +9,7 @@ const LoginScreen = () => {
         email: undefined,
         password: undefined
     })
-
+	const {login} = useContext(AuthContext)
     const form_fields = [
         {
             label_text: 'Email:',
@@ -66,8 +67,7 @@ const LoginScreen = () => {
                 setError({password: [{message:"email o contraseña incorrecto"}]})
                 break;
             case 200:
-                sessionStorage.setItem('access-token', data.access_token)
-                navigate('/chats')
+                login(data.access_token)
                 break;
         }
     }
