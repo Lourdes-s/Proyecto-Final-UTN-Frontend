@@ -4,6 +4,8 @@ import './Contacts.css'
 import useInfiniteScrolling from '../../../Hooks/useInfiniteScrolling'
 
 const Contacts = () => {
+    const defaultImage = "https://ia601308.us.archive.org/8/items/whatsapp-smiling-guy-i-accidentally-made//whatsapp%20smiling%20guy%20from%20android_thumb.jpg"
+
     const [products, setProducts] = useState([])
     const [hasMore, setHasMore] = useState(true)
     const [page, setPage] = useState(0)
@@ -19,7 +21,6 @@ const Contacts = () => {
             }
         )
         const data = await responseHTTP.json()
-        console.log(data)
         if (data.length === 0) {
             setHasMore(false)
           } else {
@@ -37,7 +38,7 @@ const Contacts = () => {
                 products.map(contact =>{
                     return(
                         <Link className='contact-list' to = {'/chat/' + contact.id} key={contact.id}>
-{/*                             <img className='profile-pic-contacts' src= {contact.thumbnail} alt='foto de perfil' /> */}
+                            <img className='profile-pic-contacts' src= {contact.thumbnail ? contact.thumbnail : defaultImage} alt='foto de perfil' /> 
                             <div className='text-contacts'>
                                 <span className='contact-name'>{contact.username}</span>
                                 <p className='contact-mensaje-text'> {contact.content}</p>
