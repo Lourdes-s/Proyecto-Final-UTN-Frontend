@@ -23,10 +23,10 @@ const Profile = ({user, isOwner, urlToReturn}) => {
                 <span className='profile-info-phone'>{user.telefono ? user.telefono : defaultData}</span>
                 <span className='profile-info-1'>{user.estado ? user.estado : defaultData}</span>
             </div>
-            <div className='info-profile-call'>
+            {!isOwner && <div className='info-profile-call'>
                 <span className='info-profile-call-icon'><LiaPhoneSolid /></span>
                 <span className='info-profile-call-text'>Llamar</span>
-            </div>
+            </div>}
             <div className='info-contact-secondary'>
                 <span className='info-contact-description'><HiOutlineChatBubbleBottomCenterText /> {user.descripcion ? user.descripcion : defaultData}</span>
                 <span className='info-contact-email'><HiOutlineMail /> {user.email}</span>

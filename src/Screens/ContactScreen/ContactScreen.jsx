@@ -39,7 +39,7 @@ const ContactScreen = () => {
     if (contact) {
         return (
             <div style={{height:'100%'}}>
-                <Profile user={userId} isOwner={false} urlToReturn={'/chat/' + contact.id}/>
+                <Profile user={contact} isOwner={false} urlToReturn={'/chat/' + contactId}/>
             </div>
         )
     }

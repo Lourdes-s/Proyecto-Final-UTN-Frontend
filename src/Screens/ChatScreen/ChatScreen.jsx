@@ -25,7 +25,7 @@ const ChatScreen = () => {
                     setError("No se encontro contacto")
                     break;
                 case 200:
-                    setContact(data)
+                    setContact({...data, "id": contactId})
                     break;
                 default:
                     setError("Algo salio mal")
