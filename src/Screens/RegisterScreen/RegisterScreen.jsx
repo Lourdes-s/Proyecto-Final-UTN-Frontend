@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import { Form } from '../../Components'
 import { Link, useNavigate } from 'react-router-dom'
+import '../Screens.css'
 
 const RegisterScreen = () => {
 
@@ -83,7 +84,7 @@ const RegisterScreen = () => {
     }
 
     return (
-        <div>
+        <div style={{height:'100%'}}>
             <h1>Registrate aqui</h1>
             <Form form_fields={form_fields} action={handlerRegister} initial_state_form={initial_state_form} error={errorState}>
                 <button type='submit'>Registrar</button>

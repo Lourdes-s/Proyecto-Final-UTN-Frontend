@@ -1,7 +1,8 @@
 import React, { useState, useContext } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { Form } from '../../Components'
 import { AuthContext } from '../../Context/AuthContext'
+import '../Screens.css'
 
 const LoginScreen = () => {
     
@@ -43,7 +44,6 @@ const LoginScreen = () => {
         password: ""
     }
 
-    const navigate  = useNavigate()
     const handleLogin = async (formState) =>{
         const responseHTTP = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/login`,
             {
@@ -67,13 +67,13 @@ const LoginScreen = () => {
                 setError({password: [{message:"email o contraseña incorrecto"}]})
                 break;
             case 200:
-                login(data.access_token)
+                login(data.access_token, data.user.id)
                 break;
         }
     }
     
     return (
-        <div>
+        <div style={{height:'100%'}}>
             <h1>Inicia Sesion</h1>
             <Form form_fields={form_fields} action={handleLogin} initial_state_form={initial_state_form} error={errorState}>
                 <button type='submit'>Iniciar Sesion</button>

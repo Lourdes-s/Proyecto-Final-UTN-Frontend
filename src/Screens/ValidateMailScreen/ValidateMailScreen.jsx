@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
-
-
-
+import '../Screens.css'
 
 const ValidateMailScreen = () => {
     const {validation_token} = useParams()
@@ -22,7 +20,6 @@ const ValidateMailScreen = () => {
                     return {...prevState, is_loading: false, response: result}
                 }
             )
-            console.log('1')
             if(result.status == 200){
                 navigate('/login')
             }
@@ -36,14 +33,13 @@ const ValidateMailScreen = () => {
         verifyMailToken(validation_token)
     }, [])
     return (
-    <div>
-        {
-            validationEmailResponseState.is_loading 
-            && <h2>Cargando...</h2>
-            
-        }
-
-    </div>
+        <div style={{height:'100%'}}>
+            {
+                validationEmailResponseState.is_loading 
+                && <h2>Cargando...</h2>
+                
+            }
+        </div>
     )
 }
 

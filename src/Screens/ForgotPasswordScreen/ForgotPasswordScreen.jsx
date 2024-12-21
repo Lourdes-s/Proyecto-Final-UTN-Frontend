@@ -56,7 +56,7 @@ const ForgotPasswordScreen = () => {
     }
 
     return (
-        <div>
+        <div style={{height:'100%'}}>
             <h1>Restablecer contraseña</h1>
             <p>Al restablecer tu contraseña se enviara un correo electronico a tu cuenta para que puedas restablecer tu contraseña</p>
             <Form form_fields={form_fields} action={submitForgotPassword} initial_state_form={initial_state_form} error={errorState}> 

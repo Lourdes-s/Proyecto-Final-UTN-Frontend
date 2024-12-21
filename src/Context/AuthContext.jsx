@@ -14,14 +14,16 @@ export const AuthProvider = ({children}) => {
             Boolean(sessionStorage.getItem('access-token')) && setIsAuthenticated(true)
         }, []
     )
-    const login = (auth_token) => {
+    const login = (auth_token, user_id) => {
         sessionStorage.setItem('access-token', auth_token)
+        sessionStorage.setItem('user-id', user_id)
         setIsAuthenticated(true)
         navigate('/')
     } 
 
     const logout = () => {
         sessionStorage.removeItem('access-token')
+        sessionStorage.removeItem('user-id')
         setIsAuthenticated(false)
         navigate('/login')
     }

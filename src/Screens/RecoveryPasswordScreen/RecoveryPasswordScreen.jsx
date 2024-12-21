@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { Form } from '../../Components'
+import '../Screens.css'
 
 const RecoveryPasswordScreen = () => {
     const {reset_token} = useParams()
@@ -58,7 +59,7 @@ const RecoveryPasswordScreen = () => {
     }
 
     return (
-        <div>
+        <div style={{height:'100%'}}>
             <h1>Modifica tu contraseña</h1>
             <Form action={actionRecoveryPassword} form_fields ={form_fields} initial_state_form={initial_state_form} error={error}>
                 <button type='submit'>Restablecer</button>
