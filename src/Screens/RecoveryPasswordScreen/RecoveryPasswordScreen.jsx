@@ -1,32 +1,41 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { Form } from '../../Components'
 
 const RecoveryPasswordScreen = () => {
     const {reset_token} = useParams()
-    console.log('Token de reset: ' + reset_token)
-    const actionRecoveryPassword = async (form_state) => {
-        console.log(form_state)
 
-        const responseHTTP = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/recovery-password/` + reset_token,
+    const [error, setError] = useState({
+        password: undefined
+    })
+    const [successState, setSuccess] = useState(false)
+
+    const actionRecoveryPassword = async (form_state) => {
+        const responseHTTP = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/recovery-password`,
             {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
+                    reset_token: reset_token,
                     password: form_state.password,
                 })
             }
         )
         const data = await responseHTTP.json()
-        console.log(data)
+        switch (responseHTTP.status) {
+            case 400:
+                setError(data.message)
+                break;
+            case 404:
+                setError({email: [{message:"el token es invalido"}]})
+                break;
+            case 200:
+                setSuccess(true)
+                break;
+        }
     }
-
-            const [error, setError] = useState({
-                email: undefined,
-                password: undefined
-            })
 
     const form_fields = [
         {
@@ -54,6 +63,7 @@ const RecoveryPasswordScreen = () => {
             <Form action={actionRecoveryPassword} form_fields ={form_fields} initial_state_form={initial_state_form} error={error}>
                 <button type='submit'>Restablecer</button>
             </Form>
+            {successState && <span>Su contraseña ha sido restablecida correctamente</span>}
             <Link to='/login'>Iniciar Sesion</Link>
         </div>
     )

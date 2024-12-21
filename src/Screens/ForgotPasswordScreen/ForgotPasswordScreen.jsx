@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom'
 import { Form } from '../../Components'
 
 const ForgotPasswordScreen = () => {
-        const [errorState, setError] = useState({
-            email: undefined,
-            password: undefined
-        })
+    const [errorState, setError] = useState({
+        email: undefined
+    })
+    const [successState, setSuccess] = useState(false)
 
     const form_fields = [
         {
@@ -29,6 +29,7 @@ const ForgotPasswordScreen = () => {
     }
 
     const submitForgotPassword = async (form_state) => {
+        setSuccess(false)
         const responseHTTP = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/forgot-password`,
             {
                 method: 'POST',
@@ -41,7 +42,17 @@ const ForgotPasswordScreen = () => {
             }
         )
         const data = await responseHTTP.json()
-        console.log(data)
+        switch (responseHTTP.status) {
+            case 400:
+                setError(data.message)
+                break;
+            case 404:
+                setError({email: [{message:"email incorrecto"}]})
+                break;
+            case 200:
+                setSuccess(true)
+                break;
+        }
     }
 
     return (
@@ -51,6 +62,7 @@ const ForgotPasswordScreen = () => {
             <Form form_fields={form_fields} action={submitForgotPassword} initial_state_form={initial_state_form} error={errorState}> 
                 <button type='submit'> Restablecer </button>
             </Form>
+            {successState && <span>El email para recuperar su contraseña ha sido envio correctamente</span>}
             <Link to='/login'>Iniciar Sesion</Link>
         </div>
     )

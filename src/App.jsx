@@ -7,8 +7,8 @@ const App = () => {
         <div className='phone'>
             <Routes>
                 <Route path="/login" element={<LoginScreen/>}/>
-                <Route path="/forgot-password" element={<ForgotPasswordScreen/>}/>
                 <Route path="/verify-email/:validation_token" element={<ValidateMailScreen/>}/>
+                <Route path="/forgot-password" element={<ForgotPasswordScreen/>}/>
                 <Route path="/recovery-password/:reset_token" element={<RecoveryPasswordScreen/>}/>
                 <Route path="/register" element={<RegisterScreen/>}/>
                 <Route element={<ProtectedRoute/>}>
