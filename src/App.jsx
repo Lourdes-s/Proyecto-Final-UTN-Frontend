@@ -13,7 +13,7 @@ const App = () => {
                 <Route path="/register" element={<RegisterScreen/>}/>
                 <Route element={<ProtectedRoute/>}>
                     <Route path="/" element={<ChatsScreen/>}/> 
-                    <Route path="/chats/:contactId" element={<ChatScreen/>}/>
+                    <Route path="/chat/:contactId" element={<ChatScreen/>}/>
                 </Route>
             </Routes>
         </div>
