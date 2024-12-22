@@ -39,7 +39,7 @@ const ChatScreen = () => {
     const [page, setPage] = useState(0)
 
     const getPage = useCallback(async () => {
-        const responseHTTP = await fetch(`${import.meta.env.VITE_API_URL}/api/chat/${contactId}?page=${page}&per_page=${5}`,
+        const responseHTTP = await fetch(`${import.meta.env.VITE_API_URL}/api/chat/${contactId}?page=${page}&per_page=${10}`,
             {
                 method: 'GET',
                 headers: {
