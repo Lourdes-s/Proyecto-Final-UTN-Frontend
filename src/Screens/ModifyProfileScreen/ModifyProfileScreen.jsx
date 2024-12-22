@@ -8,9 +8,9 @@ const ModifyProfileScreen = () => {
     const [errorState, setError] = useState({
         thumbnail: undefined,
         telephone: undefined,
-        state: undefined,
-        description: undefined,
-        address: undefined
+        public_state: undefined,
+        description_content: undefined,
+        address_content: undefined
     })
     const form_fields = [
         {
@@ -83,9 +83,9 @@ const ModifyProfileScreen = () => {
     const initial_state_form = {
         thumbnail: "",
         telephone: "",
-        state: "",
-        description: "",
-        address: ""
+        public_state: "",
+        description_content: "",
+        address_content: ""
     }
 
     const navigate  = useNavigate()
