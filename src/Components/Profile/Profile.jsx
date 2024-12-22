@@ -20,17 +20,17 @@ const Profile = ({user, isOwner, urlToReturn}) => {
             <div className='info-contact-main'>
                 <img className='profile-pic-info' src={user.thumbnail ? user.thumbnail : defaultImage} alt="Foto de perfil" />
                 <h2 className='profile-info-name'>{user.username}</h2>
-                <span className='profile-info-phone'>{user.telefono ? user.telefono : defaultData}</span>
-                <span className='profile-info-1'>{user.estado ? user.estado : defaultData}</span>
+                <span className='profile-info-phone'>{user.telephone ? user.telephone : defaultData}</span>
+                <span className='profile-info-1'>{user.public_state ? user.public_state : defaultData}</span>
             </div>
             {!isOwner && <div className='info-profile-call'>
                 <span className='info-profile-call-icon'><LiaPhoneSolid /></span>
                 <span className='info-profile-call-text'>Llamar</span>
             </div>}
             <div className='info-contact-secondary'>
-                <span className='info-contact-description'><HiOutlineChatBubbleBottomCenterText /> {user.descripcion ? user.descripcion : defaultData}</span>
+                <span className='info-contact-description'><HiOutlineChatBubbleBottomCenterText /> {user.description_content ? user.description_content : defaultData}</span>
                 <span className='info-contact-email'><HiOutlineMail /> {user.email}</span>
-                <span className='info-contact-address'><HiOutlineLocationMarker /> {user.direccion ? user.direccion : defaultData}</span>
+                <span className='info-contact-address'><HiOutlineLocationMarker /> {user.address_content ? user.address_content : defaultData}</span>
             </div>
             {
                 isOwner && 

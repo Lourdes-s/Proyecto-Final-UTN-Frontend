@@ -48,7 +48,7 @@ const ModifyProfileScreen = () => {
             field_data_props: {
                 type: 'text',
                 id: 'text',
-                name: 'state',
+                name: 'public_state',
                 placeholder: 'conectado'
             }
         },
@@ -61,7 +61,7 @@ const ModifyProfileScreen = () => {
             field_data_props: {
                 type: 'text',
                 id: 'text',
-                name: 'description',
+                name: 'description_content',
                 placeholder: 'Me gusta el arte....'
             }
         },
@@ -74,7 +74,7 @@ const ModifyProfileScreen = () => {
             field_data_props: {
                 type: 'text',
                 id: 'text',
-                name: 'address',
+                name: 'address_content',
                 placeholder: '9 de Julio'
             }
         },
