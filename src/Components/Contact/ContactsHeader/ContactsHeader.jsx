@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import './ContactsHeader.css'
+import { BsFillPersonVcardFill } from "react-icons/bs";
+import { Link } from 'react-router-dom';
 
 const ContactsHeader = ({setListaContactos}) => {
 
@@ -21,6 +23,7 @@ const ContactsHeader = ({setListaContactos}) => {
                 onChange={handleChangeValue}
                 value={searchStringState}
             />
+            <Link to="/profile" className='info-profile-icon'><BsFillPersonVcardFill /></Link>
         </div>
     )
 }
