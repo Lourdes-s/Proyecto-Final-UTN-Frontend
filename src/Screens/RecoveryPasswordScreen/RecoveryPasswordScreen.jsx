@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { Form } from '../../Components'
 import '../Screens.css'
-import './recoveryPassword.css'
 
 const RecoveryPasswordScreen = () => {
     const {reset_token} = useParams()
