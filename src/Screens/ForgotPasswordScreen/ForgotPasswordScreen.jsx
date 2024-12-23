@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Form } from '../../Components'
+import '../Screens.css'
+import './forgotPassword.css'
 
 const ForgotPasswordScreen = () => {
     const [errorState, setError] = useState({
@@ -16,6 +18,7 @@ const ForgotPasswordScreen = () => {
                 className: 'row_field'
             },
             field_data_props: {
+                className: 'input-f-password',
                 type: 'email',
                 id: 'email',
                 name: 'email',
@@ -56,14 +59,14 @@ const ForgotPasswordScreen = () => {
     }
 
     return (
-        <div style={{height:'100%'}}>
-            <h1>Restablecer contraseña</h1>
-            <p>Al restablecer tu contraseña se enviara un correo electronico a tu cuenta para que puedas restablecer tu contraseña</p>
-            <Form form_fields={form_fields} action={submitForgotPassword} initial_state_form={initial_state_form} error={errorState}> 
-                <button type='submit'> Restablecer </button>
+        <div className='screen-f-password' style={{height:'100%'}}>
+            <h1 className='title-f-password'>Restablecer contraseña</h1>
+            <p className='subtitle-f-password'>Al restablecer tu contraseña se enviara un correo electronico a tu cuenta para que puedas restablecer tu contraseña</p>
+            <Form className='form-f-password' form_fields={form_fields} action={submitForgotPassword} initial_state_form={initial_state_form} error={errorState}> 
+                <button className='button-f-password' type='submit'> Restablecer </button>
             </Form>
-            {successState && <span>El email para recuperar su contraseña ha sido envio correctamente</span>}
-            <Link to='/login'>Iniciar Sesion</Link>
+            {successState && <span className='success-f-password'>El email para recuperar su contraseña ha sido envio correctamente</span>}
+            <Link className='link-f-password' to='/login'>Iniciar Sesion</Link>
         </div>
     )
 }

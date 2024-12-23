@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { Form } from '../../Components'
 import '../Screens.css'
+import './recoveryPassword.css'
 
 const RecoveryPasswordScreen = () => {
     const {reset_token} = useParams()
@@ -46,6 +47,7 @@ const RecoveryPasswordScreen = () => {
                 className: 'row_field'
             },
             field_data_props: {
+                className: 'input-r-password',
                 type: 'password',
                 id: 'password',
                 name: 'password',
@@ -59,13 +61,13 @@ const RecoveryPasswordScreen = () => {
     }
 
     return (
-        <div style={{height:'100%'}}>
-            <h1>Modifica tu contraseña</h1>
-            <Form action={actionRecoveryPassword} form_fields ={form_fields} initial_state_form={initial_state_form} error={error}>
-                <button type='submit'>Restablecer</button>
+        <div className='screen-r-password' style={{height:'100%'}}>
+            <h1 className='title-r-password'>Modifica tu contraseña</h1>
+            <Form  className='form-r-password' action={actionRecoveryPassword} form_fields ={form_fields} initial_state_form={initial_state_form} error={error}>
+                <button className='button-r-password' type='submit'>Restablecer</button>
             </Form>
-            {successState && <span>Su contraseña ha sido restablecida correctamente</span>}
-            <Link to='/login'>Iniciar Sesion</Link>
+            {successState && <span className='success-r-password'>Su contraseña ha sido restablecida correctamente</span>}
+            <Link className='link-r-password' to='/login'>Iniciar Sesion</Link>
         </div>
     )
 }

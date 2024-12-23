@@ -42,7 +42,7 @@ const Field = ({field, handleChange, handleChangeImage, state_value, error}) => 
                 <>
                     {field.field_component === 'INPUT_IMAGE' && state_value && <img src={state_value} alt="" width={200}/>}
                     {field.field_component === 'INPUT_IMAGE' && <input {...field.field_data_props} onChange={(e) => handleChangeImage(e, field.field_data_props.name)} />}
-                    {field.field_component === 'INPUT' && <input {...field.field_data_props} onChange={handleChange} value={state_value} />}
+                    {field.field_component === 'INPUT' && <input {...field.field_data_props} onChange={handleChange} value={state_value} className={field.field_data_props.className}/>}
                 </>
             </div>
             {

@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import { Form } from '../../Components'
 import { Link, useNavigate } from 'react-router-dom'
 import '../Screens.css'
+import './register.css'
 
 const RegisterScreen = () => {
 
@@ -19,6 +20,7 @@ const RegisterScreen = () => {
                 className: 'row_field'
             },
             field_data_props: {
+                className: 'input-register',
                 type: 'text',
                 id: 'name',
                 name: 'name',
@@ -32,6 +34,7 @@ const RegisterScreen = () => {
                 className: 'row_field'
             },
             field_data_props: {
+                className: 'input-register',
                 type: 'email',
                 id: 'email',
                 name: 'email',
@@ -45,6 +48,7 @@ const RegisterScreen = () => {
                 className: 'row_field'
             },
             field_data_props: {
+                className: 'input-register',
                 type: 'password',
                 id: 'password',
                 name: 'password',
@@ -84,12 +88,12 @@ const RegisterScreen = () => {
     }
 
     return (
-        <div style={{height:'100%'}}>
-            <h1>Registrate aqui</h1>
-            <Form form_fields={form_fields} action={handlerRegister} initial_state_form={initial_state_form} error={errorState}>
-                <button type='submit'>Registrar</button>
+        <div className='screen-register' style={{height:'100%'}}>
+            <h1 className='title-register'>Registrate aqui</h1>
+            <Form className='form-register' form_fields={form_fields} action={handlerRegister} initial_state_form={initial_state_form} error={errorState}>
+                <button className='button-register' type='submit'>Registrar</button>
             </Form>
-                <Link to='/login'>Iniciar sesion</Link>
+                <Link className='link-register' to='/login'>Iniciar sesion</Link>
         </div>
     )
 }

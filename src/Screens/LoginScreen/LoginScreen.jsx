@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { Form } from '../../Components'
 import { AuthContext } from '../../Context/AuthContext'
 import '../Screens.css'
+import './login.css'
 
 const LoginScreen = () => {
     
@@ -19,6 +20,7 @@ const LoginScreen = () => {
                 className: 'row_field'
             },
             field_data_props: {
+                className: 'input-login',
                 type: 'email',
                 id: 'email',
                 name: 'email',
@@ -32,6 +34,7 @@ const LoginScreen = () => {
                 className: 'row_field'
             },
             field_data_props: {
+                className: 'input-login',
                 type: 'password',
                 id: 'password',
                 name: 'password'
@@ -73,12 +76,12 @@ const LoginScreen = () => {
     }
     
     return (
-        <div style={{height:'100%'}}>
-            <h1>Inicia Sesion</h1>
-            <Form form_fields={form_fields} action={handleLogin} initial_state_form={initial_state_form} error={errorState}>
-                <button type='submit'>Iniciar Sesion</button>
+        <div className='screen-login' style={{height:'100%'}}>
+            <h1 className='title-login'>Inicia Sesion</h1>
+            <Form className='form-login' form_fields={form_fields} action={handleLogin} initial_state_form={initial_state_form} error={errorState}>
+                <button className='button-login' type='submit'>Iniciar Sesion</button>
             </Form>
-            <Link to='/forgot-password'>Olvide mi contraseña</Link>
+            <Link  className='link-login' to='/forgot-password'>Olvide mi contraseña</Link>
         </div>
     )
 }
