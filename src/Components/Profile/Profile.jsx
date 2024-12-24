@@ -35,7 +35,6 @@ const Profile = ({user, isOwner, urlToReturn}) => {
             {
                 isOwner && 
                 <button onClick={() => navigate("/profile/modify")} className='info-profile-modify'>
-                    <span className='info-profile-call-icon'><LiaPhoneSolid /></span>
                     <span className='info-profile-call-text'>Modificar</span>
                 </button >
             }

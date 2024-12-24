@@ -45,6 +45,7 @@ const ValidateMailScreen = () => {
     useEffect(() => {
         verifyMailToken(validation_token)
     }, [validation_token])
+
     return (
         <div className ='validate-mail-container' style={{ height: '100%' }}>
             {validationEmailResponseState.is_loading && <h2 className='loading-message-validate'>Cargando...</h2>}
