@@ -49,7 +49,6 @@ const ChatScreen = () => {
             }
         )
         const data = await responseHTTP.json()
-        console.log(data)
         if (data.length === 0) {
             setHasMore(false)
             } else {
