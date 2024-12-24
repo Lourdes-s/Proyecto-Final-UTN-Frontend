@@ -2,6 +2,7 @@ import React, { useState, useContext } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { Form } from '../../Components'
 import '../Screens.css'
+import './modifyProfile.css'
 
 const ModifyProfileScreen = () => {
     
@@ -20,6 +21,7 @@ const ModifyProfileScreen = () => {
                 className: 'row_field'
             },
             field_data_props: {
+                className: 'input-modify',
                 type: 'file',
                 accept: 'image/*',
                 id: 'thumbnail',
@@ -33,6 +35,7 @@ const ModifyProfileScreen = () => {
                 className: 'row_field'
             },
             field_data_props: {
+                className: 'input-modify',
                 type: 'tel',
                 id: 'tel',
                 name: 'telephone',
@@ -46,6 +49,7 @@ const ModifyProfileScreen = () => {
                 className: 'row_field'
             },
             field_data_props: {
+                className: 'input-modify',
                 type: 'text',
                 id: 'text',
                 name: 'public_state',
@@ -59,6 +63,7 @@ const ModifyProfileScreen = () => {
                 className: 'row_field'
             },
             field_data_props: {
+                className: 'input-modify',
                 type: 'text',
                 id: 'text',
                 name: 'description_content',
@@ -72,6 +77,7 @@ const ModifyProfileScreen = () => {
                 className: 'row_field'
             },
             field_data_props: {
+                className: 'input-modify',
                 type: 'text',
                 id: 'text',
                 name: 'address_content',
@@ -116,11 +122,12 @@ const ModifyProfileScreen = () => {
     }
     
     return (
-        <div style={{height:'100%'}}>
-            <Form form_fields={form_fields} action={handleModify} initial_state_form={initial_state_form} error={errorState}>
-                <button type='submit'>Modificar</button>
+        <div className='container-modify' style={{height:'100%'}}>
+            <h1 className='title-modify'>Perfil</h1>
+            <Form className='form-modify' form_fields={form_fields} action={handleModify} initial_state_form={initial_state_form} error={errorState}>
+                <button className='button-modify' type='submit'>Modificar</button>
             </Form>
-            <Link to='/profile'>Cancelar</Link>
+            <Link className='link-modify' to='/profile'>Cancelar</Link>
         </div>
     )
 }

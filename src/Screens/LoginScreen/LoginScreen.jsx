@@ -82,6 +82,7 @@ const LoginScreen = () => {
                 <button className='button-login' type='submit'>Iniciar Sesion</button>
             </Form>
             <Link  className='link-login' to='/forgot-password'>Olvide mi contraseña</Link>
+            <Link  className='link-login-register' to='/register'>Crear un nuevo usuario</Link>
         </div>
     )
 }
