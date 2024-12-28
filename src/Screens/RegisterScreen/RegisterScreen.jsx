@@ -89,7 +89,7 @@ const RegisterScreen = () => {
 
     return (
         <div className='screen-register' style={{height:'100%'}}>
-            <h1 className='title-register'>Registrate aqui</h1>
+            <h1 className='title-register'>Crea una cuenta</h1>
             <Form className='form-register' form_fields={form_fields} action={handlerRegister} initial_state_form={initial_state_form} error={errorState}>
                 <button className='button-register' type='submit'>Registrar</button>
             </Form>
