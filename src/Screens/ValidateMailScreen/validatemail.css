@@ -1,30 +1,29 @@
 .validate-mail-container {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centrar verticalmente */
-    align-items: center; /* Centrar horizontalmente */
-    height: 100vh; /* Ocupa toda la altura de la ventana */
-    background-color: #fce7ef; /* Fondo suave rosa */
-    text-align: center; /* Centrar el texto */
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    background-color: #fce7ef; 
+    text-align: center; 
 }
 
-/* Estilo para el mensaje de carga */
+
 .loading-message-validate {
-    font-size: 2rem; /* Tamaño de fuente grande */
-    color: #ff6f61; /* Color divertido para el mensaje de carga */
-    margin-bottom: 20px; /* Espacio inferior */
+    font-size: 2rem; 
+    color: #ff6f61; 
+    margin-bottom: 20px; 
 }
 
-/* Estilo para el mensaje de error */
 .error-message-validate {
-    font-size: 1.5rem; /* Tamaño de fuente */
-    color: #dc3545; /* Rojo para el mensaje de error */
-    margin-top: 20px; /* Espacio superior */
+    font-size: 1.5rem; 
+    color: #dc3545; 
+    margin-top: 20px; 
 }
 
-/* Estilo para el mensaje de éxito */
+
 .success-message-validate {
-    font-size: 1.5rem; /* Tamaño de fuente */
-    color: #28a745; /* Verde para el mensaje de éxito */
-    margin-top: 20px; /* Espacio superior */
+    font-size: 1.5rem; 
+    color: #28a745; 
+    margin-top: 20px;
 }

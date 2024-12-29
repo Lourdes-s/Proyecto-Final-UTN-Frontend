@@ -8,6 +8,7 @@ const ForgotPasswordScreen = () => {
     const [errorState, setError] = useState({
         email: undefined
     })
+    
     const [successState, setSuccess] = useState(false)
 
     const form_fields = [

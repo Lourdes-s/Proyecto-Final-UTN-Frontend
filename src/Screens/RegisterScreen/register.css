@@ -59,6 +59,13 @@
     background-color: #bb6689; 
 }
 
+.success-register {
+    margin-top: 20px; 
+    color: #28a745; 
+    font-size: 1rem; 
+    text-align: center; 
+}
+
 .link-register {
     margin-top: 20px; 
     color: #1c67b8; 

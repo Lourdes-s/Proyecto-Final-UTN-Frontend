@@ -12,6 +12,8 @@ const RegisterScreen = () => {
         password: undefined
     })
 
+        const [successState, setSuccess] = useState(false)
+
     const form_fields = [
         {
             label_text: 'Nombre de usuario:',
@@ -66,6 +68,7 @@ const RegisterScreen = () => {
 
 
     const handlerRegister = async (formState) => {
+        setSuccess(false)
         const responseHTTP = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/register`, 
             {
             method: 'POST',
@@ -82,6 +85,7 @@ const RegisterScreen = () => {
                 setErrorState(data.message)
                 break;
             case 200:
+                setSuccess(true)
                 navigate('/login')
                 break;
         }
@@ -93,7 +97,8 @@ const RegisterScreen = () => {
             <Form className='form-register' form_fields={form_fields} action={handlerRegister} initial_state_form={initial_state_form} error={errorState}>
                 <button className='button-register' type='submit'>Registrar</button>
             </Form>
-                <Link className='link-register' to='/login'>Iniciar sesion</Link>
+            {successState && <span className='success-register'>Usuario creado exitosamente</span>}
+            <Link className='link-register' to='/login'>Iniciar sesion</Link>
         </div>
     )
 }
