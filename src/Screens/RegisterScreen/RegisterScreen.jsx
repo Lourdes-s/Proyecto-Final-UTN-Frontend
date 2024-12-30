@@ -86,6 +86,7 @@ const RegisterScreen = () => {
                 break;
             case 201:
                 setSuccess(true)
+                navigate('/login')
                 break;
         }
     }
