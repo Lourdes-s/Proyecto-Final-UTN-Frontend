@@ -84,9 +84,8 @@ const RegisterScreen = () => {
             case 400:
                 setErrorState(data.message)
                 break;
-            case 200:
+            case 201:
                 setSuccess(true)
-                navigate('/login')
                 break;
         }
     }
