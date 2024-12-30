@@ -86,7 +86,6 @@ const RegisterScreen = () => {
                 break;
             case 201:
                 setSuccess(true)
-                navigate('/login')
                 break;
         }
     }
@@ -97,7 +96,7 @@ const RegisterScreen = () => {
             <Form className='form-register' form_fields={form_fields} action={handlerRegister} initial_state_form={initial_state_form} error={errorState}>
                 <button className='button-register' type='submit'>Registrar</button>
             </Form>
-            {successState && <span className='success-register'>Usuario creado exitosamente</span>}
+            {successState && <span className='success-register'>Usuario creado exitosamente, revise su correo electronico para verificar su cuenta</span>}
             <Link className='link-register' to='/login'>Iniciar sesion</Link>
         </div>
     )

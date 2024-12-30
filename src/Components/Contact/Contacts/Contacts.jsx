@@ -23,7 +23,8 @@ const Contacts = () => {
         const data = await responseHTTP.json()
         if (data.length === 0) {
             setHasMore(false)
-          } else {
+        } 
+        else {
             setProducts((prevProducts) => [...prevProducts, ...data])
             setPage((prevPage) => prevPage + 1)
         }
@@ -36,13 +37,23 @@ const Contacts = () => {
         <div className='contacts-container'>
             {
                 products.map(contact =>{
+
+                    const date = new Date(contact.created_at);
+                
+                    // Extraer la hora y los minutos
+                    const hours = date.getHours().toString().padStart(2, '0') // Asegura que tenga 2 dígitos
+                    const minutes = date.getMinutes().toString().padStart(2, '0') // Asegura que tenga 2 dígitos
+                    
+                    // Formatear la hora
+                    const formattedTime = `${hours}:${minutes}`
+
                     return(
                         <Link className='contact-list' to = {'/chat/' + contact.id} key={contact.id}>
                             <img className='profile-pic-contacts' src= {contact.thumbnail ? contact.thumbnail : defaultImage} alt='foto de perfil' /> 
                             <div className='text-contacts'>
                                 <span className='contact-name'>{contact.username}</span>
                                 <p className='contact-mensaje-text'> {contact.content}</p>
-                                <span className='contact-time'>{contact.created_at}</span>
+                                <span className='contact-time'>{formattedTime}</span>
                             </div>
                         </Link>
                     )
