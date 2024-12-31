@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import '../Screens.css'
 import { useParams } from 'react-router-dom'
 import { Profile } from '../../Components'
+import './contact.css'
 
 const ContactScreen = () => {
 
@@ -23,7 +24,7 @@ const ContactScreen = () => {
             const data = await responseHTTP.json()
             switch (responseHTTP.status) {
                 case 404:
-                    setError("No se encontro contacto")
+                    setError("Este usuario no pertenece a sus contactos")
                     break;
                 case 200:
                     setContact(data)
@@ -45,8 +46,10 @@ const ContactScreen = () => {
     }
     if (error) {
         return (
-            <div style={{height:'100%'}}>
-                <h1>{error}</h1>
+            <div className="not-found-contact" style={{height:'100%'}}>
+                <h1 className="error-title">{error}</h1>
+                <img src="https://i.pinimg.com/736x/2d/15/7d/2d157de6280104b89b2b1505d2195934.jpg" alt="Error" className="error-image" /> 
+                <button className="back-button" onClick={() => window.history.back()}>Volver</button>
             </div>
         )
     }

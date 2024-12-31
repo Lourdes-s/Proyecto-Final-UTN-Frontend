@@ -46,3 +46,60 @@
 .not-found-link:hover {
     background-color: #bb6689; 
 }
+
+/* -------------------------------------------------------------MEDIAQUERIES------------------------------------------------------------- */ 
+
+@media (min-width: 768px) {
+    .not-found-title {
+        font-size: 7rem; 
+    }
+
+    .not-found-message {
+        font-size: 1.8rem; 
+    }
+
+    .not-found-image {
+        width: 400px; 
+    }
+
+    .not-found-link {
+        font-size: 1.1rem; 
+    }
+}
+
+@media (min-width: 1024px) {
+    .not-found-title {
+        font-size: 8rem; 
+    }
+
+    .not-found-message {
+        font-size: 2rem; 
+    }
+
+    .not-found-image {
+        width: 500px;
+    }
+
+    .not-found-link {
+        font-size: 1.2rem; 
+    }
+}
+
+
+@media (min-width: 2000px) {
+    .not-found-title {
+        font-size: 9rem; 
+    }
+
+    .not-found-message {
+        font-size: 2.5rem; 
+    }
+
+    .not-found-image {
+        width: 600px;
+    }
+
+    .not-found-link {
+        font-size: 1.3rem; 
+    }
+}

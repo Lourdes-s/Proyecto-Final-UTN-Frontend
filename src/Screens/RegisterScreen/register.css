@@ -5,7 +5,6 @@
     font-family: "Inter", sans-serif;
 }
 
-
 .screen-register {
     background-color: #fce7ef; 
     display: flex;
@@ -18,7 +17,7 @@
 }
 
 .title-register {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #333;
     margin-bottom: 20px;
     text-align: center; 
@@ -31,7 +30,7 @@
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); 
     padding: 40px; 
     width: 100%;
-    max-width: 400px; 
+    max-width: 90%; 
 }
 
 .input-register {
@@ -41,7 +40,6 @@
     border: 1px solid #d1a3b8; 
     border-radius: 8px; 
     font-size: 1rem; 
-    transition: border-color 0.3s; 
 }
 
 .button-register {
@@ -76,4 +74,75 @@
 .link-register:hover {
     color: #0056b3; 
     text-decoration: underline; 
+}
+
+/* -------------------------------------------------------------MEDIAQUERIES------------------------------------------------------------- */ 
+
+@media (min-width: 768px) {
+    .title-register {
+        font-size: 2.5rem; 
+    }
+
+    .form-register {
+        padding: 30px; 
+        max-width: 600px; 
+    }
+
+    .input-register {
+        font-size: 1.1rem; 
+    }
+
+    .button-register {
+        font-size: 1.1rem; 
+    }
+
+    .success-register, .link-register {
+        font-size: 1rem; 
+    }
+}
+
+@media (min-width: 1024px) {
+    .title-register {
+        font-size: 3rem; 
+    }
+
+    .form-register {
+        padding: 40px; 
+        max-width: 800px; 
+    }
+
+    .input-register {
+        font-size: 1.2rem; 
+    }
+
+    .button-register {
+        font-size: 1.2rem; 
+    }
+
+    .success-register, .link-register {
+        font-size: 1.1rem; 
+    }
+}
+
+@media (min-width: 2000px) {
+    .title-register {
+        font-size: 3.5rem; 
+    }
+
+    .form-register {
+        padding: 50px; 
+        max-width: 1000px; 
+    }
+
+    .input-register {
+        font-size: 1.3rem; 
+    }
+
+    .button-register {
+        font-size: 1.3rem; 
+    }
+
+    .success-register, .link-register {
+        font-size: 1.2rem;
+    }
 }

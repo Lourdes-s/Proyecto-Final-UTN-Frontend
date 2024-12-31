@@ -27,3 +27,38 @@
     color: #28a745; 
     margin-top: 20px;
 }
+
+/* -------------------------------------------------------------MEDIAQUERIES------------------------------------------------------------- */ 
+
+@media (min-width: 768px) {
+    .loading-message-validate {
+        font-size: 2.5rem; 
+    }
+
+    .error-message-validate,
+    .success-message-validate {
+        font-size: 2rem; 
+    }
+}
+
+@media (min-width: 1024px) {
+    .loading-message-validate {
+        font-size: 3rem;
+    }
+
+    .error-message-validate,
+    .success-message-validate {
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 2000px) {
+    .loading-message-validate {
+        font-size: 3.5rem; 
+    }
+
+    .error-message-validate,
+    .success-message-validate {
+        font-size: 3rem; 
+    }
+}

@@ -8,7 +8,7 @@
 }
 
 .info-profile-container {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -114,6 +114,7 @@
 @media only screen and (min-width: 768px) {
     .info-profile-container {
         max-width: 600px;
+        padding: 10px;
     }
 
     .profile-pic-info {
