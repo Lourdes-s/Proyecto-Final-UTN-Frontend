@@ -88,3 +88,73 @@
     color: #0056b3; 
     text-decoration: underline; 
 }
+
+
+@media (min-width: 768px) {
+    .title-modify {
+        font-size: 3rem; 
+    }
+
+    .form-modify {
+        padding: 50px; 
+        max-width: 600px; 
+    }
+
+    .input-modify {
+        font-size: 1.1rem;
+    }
+
+    .button-modify {
+        font-size: 1.1rem; 
+    }
+
+    .link-modify {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .title-modify {
+        font-size: 3.5rem; 
+    }
+
+    .form-modify {
+        padding: 60px; 
+        max-width: 800px; 
+    }
+
+    .input-modify {
+        font-size: 1.2rem;
+    }
+
+    .button-modify {
+        font-size: 1.2rem; 
+    }
+
+    .link-modify {
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 2000px) {
+    .title-modify {
+        font-size: 4rem;
+    }
+
+    .form-modify {
+        padding: 70px;
+        max-width: 1000px;
+    }
+
+    .input-modify {
+        font-size: 1.3rem; 
+    }
+
+    .button-modify {
+        font-size: 1.3rem;
+    }
+
+    .link-modify {
+        font-size: 1.2rem; 
+    }
+}
