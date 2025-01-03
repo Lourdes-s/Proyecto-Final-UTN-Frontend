@@ -43,6 +43,12 @@
     font-weight: bold; 
 }
 
+.error-message {
+    color: rgb(175, 22, 22); 
+    font-size: 0.9rem; 
+}
+
+
 .input-modify[type="file"] {
     border: none; 
     padding: 0; 
@@ -82,8 +88,6 @@
     text-decoration: none; 
     font-size: 0.9rem;
 }
-
-
 .link-modify:hover {
     color: #0056b3; 
     text-decoration: underline; 
