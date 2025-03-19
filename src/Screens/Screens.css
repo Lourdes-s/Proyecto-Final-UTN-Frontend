@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #f8cde1;
+    background-color: #fcf6f6;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,7 +18,7 @@ body {
     height: 95vh;
     width: 320px;
     border-radius: 5px;
-    border: 3px solid #f8cde1;
+    border: 3px solid #fce7ef;
     display: flex;
     flex-direction: column;
     overflow: hidden;

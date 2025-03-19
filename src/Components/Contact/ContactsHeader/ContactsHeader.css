@@ -11,21 +11,9 @@
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-    background-color: #f1b2d7;
+    background-color: #fce7ef;
     border-bottom: 1px solid #ccc;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-}
-
-
-.contact-header-container {
-    height: 10%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-    background-color: #f1b2d7;
-    border-bottom: 1px solid #ccc;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
 
 .info-profile-icon {
@@ -39,8 +27,7 @@
 }
 
 .contacts-header-contact {
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 2rem;
     color: #333;
     margin: 0;
 }
@@ -63,7 +50,7 @@
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-/* -------------------------------------------------------------MEDIAQUERIES------------------------------------------------------------- */
+/*-------------------------------------------------------------MEDIAQUERIES------------------------------------------------------------- */
 
 @media (min-width: 768px) {
     .contact-header-container {

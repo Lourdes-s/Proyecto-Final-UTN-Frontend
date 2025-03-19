@@ -7,13 +7,14 @@
 
 .container-list{
     height: 80%;
-    background-color: #ffd8ee;
+    background-color: #ffffff; 
     padding: 10px;
     display: flex;
     flex-direction: column-reverse;
     overflow-y: scroll;
     overflow-x: hidden;
     gap: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .container-list::-webkit-scrollbar {
@@ -21,17 +22,17 @@
 }
 
 .container-list::-webkit-scrollbar-track {
-    background: #f8d1eb; 
+    background: #ffffff;
     border-radius: 4px; 
 }
 
 .container-list::-webkit-scrollbar-thumb {
-    background-color:#f8c4e2; 
+    background-color:#f7d8e4;
     border-radius: 4px; 
 }
 
 .container-list::-webkit-scrollbar-thumb:hover {
-    background: #f7a7d5;
+    background: #eccad7;
 }
 
 /* -------------------------------------------------------------MEDIAQUERIES------------------------------------------------------------- */

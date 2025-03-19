@@ -1,50 +1,59 @@
-
 * {
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Inter", sans-serif; 
 }
 
 .form-message {
     height: 10vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f5b6d9;
-    padding: 0 30px;
+    justify-content: center; 
+    align-items: center; 
+    padding: 30px; 
+    background-color: #ffffff; 
+    border-top: 1px solid #e0e0e0; 
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); 
 }
 
+
 .form {
-    height: 10vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex; 
     width: 100%;
 }
 
+
 .input-text {
-    height: 4vh;
-    width: 80%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 12px;
-    background-color: #fbefef;
-    box-shadow: inset 11px 11px 22px #ddd2d2, inset -11px -11px 22px #ffffff;
+    flex: 1; 
+    padding: 10px; 
+    border: 1px solid #fce7ef;
+    border-radius: 20px;
+    font-size: 16px; 
+    outline: none;
+    margin-right: 30px; 
+}
+
+.input-text:focus {
+    border-color: #f1cedc;
+}
+
+.icon-send {
+    font-size: 25px; 
 }
 
 .button-submit {
-    height: 4vh; 
-    width: 20%;
-    background-color: transparent;
-    border: none;
-    padding: 10px;
-    font-size: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #464646;
+    background-color: transparent; 
+    color: #df78a3;    
+    border: none; 
+    border-radius: 50px; 
+    padding: 8px 12px; 
     cursor: pointer; 
+    transition: background-color 0.3s; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
 }
 
-/* No hice mediaqueries porque estuve probando con el vh 🌸 y siento que seve bien en todos los tamaños */
+.button-submit:active {
+    background-color: #e6e6e6; 
+}

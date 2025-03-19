@@ -8,25 +8,22 @@
     font-family: "Inter", sans-serif;
 }
 
-.header{
-    background-color:#f1b2d7;
-    box-shadow: 3px 3px 10px 3px #7776773f;
+.header {
+    background-color: #fce7ef;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
     height: 10%;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 5px;
+    padding: 10px;
 }
 
 .contact-container{
     display: flex;
-    justify-content: start;
     align-items: center;
+    flex-grow: 1;
     gap: 10px;
-    padding: 10px 5px 10px 5px;
-    width: 75%;
-    height: 100%;
 }
 
 .name-pic{
@@ -41,33 +38,25 @@
     margin-right: 16px;
 }
 
-.name{
-    font-size: 120%;
-    font-weight: bold;
-    color: #464646;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 80%;
-    height: 40%;
+.name {
+    font-size: 1.2rem; 
+    font-weight: 600; 
+    color: #333; 
 }
 
 .header-buttons{
     display: flex;
-    justify-content:space-between;
     align-items: center;
-    height: 100%;
     padding: 10px 5px;
-    overflow: hidden;
-    width: 25%;
+    gap: 10px;
 }
 
-.header-buttons .button{
+.header-buttons .button {
     background-color: transparent;
     border: none;
-    font-size: 20px;
-    color: #464646;
-    margin: 0 2px;
+    font-size: 1.5rem; 
+    color: #333; 
+    transition: color 0.3s;
 }
 
 .contact-container .button{
@@ -93,10 +82,6 @@
         font-size: 120%;
     }
 
-    .header-buttons {
-        width: 30%;
-    }
-
     .header-buttons .button {
         font-size: 22px;
     }
@@ -120,10 +105,6 @@
         font-size: 140%;
     }
 
-    .header-buttons {
-        width: 35%;
-    }
-
     .header-buttons .button {
         font-size: 25px;
     }
@@ -145,10 +126,6 @@
 
     .name {
         font-size: 160%;
-    }
-
-    .header-buttons {
-        width: 40%;
     }
 
     .header-buttons .button {

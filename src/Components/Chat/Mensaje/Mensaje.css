@@ -1,63 +1,60 @@
-*{ 
-    padding: 0px;
-    margin: 0px;
+* { 
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
 }
 
-.container-chat{
+.container-chat {
     padding: 5px;
     width: 100%;
-    height: auto;
     display: flex;
     align-items: center;
 }
 
-.container-chat.right1{
-    justify-content: end;
+.container-chat.right1 {
+    justify-content: flex-end; /* Cambiar a flex-end para alinear a la derecha */
 }
 
-
-.chats{
-    padding: 5px;
-    background-color: #b1b1b12d;
+.chats {
+    padding: 10px; /* Aumentar el padding para más espacio */
+    background-color: #f0f0f081; /* Un gris claro para el fondo de los mensajes */
     display: flex;
     flex-direction: column;
-    height: auto;
-    border-radius: 5px;
+    border-radius: 8px; /* Bordes redondeados */
     max-width: 80%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Sombra sutil */
 }
 
-.right2{
-    background-color: #b1b1b12d;
+.right2 {
+    background-color: #f0f0f081; /* Mantener el mismo color para los mensajes enviados */
 }
 
-.info{
+.info {
     padding: 5px;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     gap: 5px;
-    font-size: 55%;
+    font-size: 0.75rem; /* Tamaño de fuente más pequeño */
 }
 
-.author{
-    font-size: 90% ;
+.author {
+    font-size: 0.9rem; /* Tamaño de fuente para el autor */
     font-weight: bold;
     width: 100%;
-    height: 20%;
     padding: 5px;
 }
 
-.text{
+.text {
     height: auto;
-    font-size: 80%;
-    padding: 5px ;
+    font-size: 0.85rem; /* Tamaño de fuente para el texto */
+    padding: 5px;
 }
 
-.status-container{
+.status-container {
     display: flex;
     gap: 3px;
-    justify-content: end;
+    justify-content: flex-end;
 }
 
 /* -------------------------------------------------------------MEDIAQUERIES------------------------------------------------------------- */
@@ -68,15 +65,15 @@
     }
 
     .info {
-        font-size: 60%; 
+        font-size: 0.8rem; 
     }
 
     .author {
-        font-size: 100%; 
+        font-size: 1rem; 
     }
 
     .text {
-        font-size: 90%;
+        font-size: 0.9rem;
     }
 }
 
@@ -85,16 +82,15 @@
         max-width: 50%; 
     }
     .info {
-        font-size: 70%; 
+        font-size: 0.85rem; 
     }
     .author {
-        font-size: 110%; 
+        font-size: 1.1rem; 
     }
     .text {
-        font-size: 100%; 
+        font-size: 1rem; 
     }
 }
-
 
 @media (min-width: 2000px) {
     .chats {
@@ -102,14 +98,14 @@
     }
 
     .info {
-        font-size: 80%; 
+        font-size: 0.9rem; 
     }
 
     .author {
-        font-size: 120%; 
+        font-size: 1.2rem; 
     }
 
     .text {
-        font-size: 110%; 
+        font-size: 1.1rem; 
     }
 }
