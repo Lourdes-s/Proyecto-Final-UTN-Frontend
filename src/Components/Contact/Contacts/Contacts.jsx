@@ -39,11 +39,9 @@ const Contacts = () => {
                 products.map(contact =>{
 
                     const date = new Date(contact.created_at);
-                
                     // Extraer la hora y los minutos
                     const hours = date.getHours().toString().padStart(2, '0') // Asegura que tenga 2 dígitos
                     const minutes = date.getMinutes().toString().padStart(2, '0') // Asegura que tenga 2 dígitos
-                    
                     // Formatear la hora
                     const formattedTime = `${hours}:${minutes}`
 

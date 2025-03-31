@@ -24,8 +24,8 @@ const Profile = ({user, isOwner, urlToReturn}) => {
                 <span className='profile-info-1'>{user.public_state ? user.public_state : defaultData}</span>
             </div>
             {!isOwner && <div className='info-profile-call'>
-                <span className='info-profile-call-icon'><LiaPhoneSolid /></span>
-                <span className='info-profile-call-text'>Llamar</span>
+                <span><LiaPhoneSolid/></span>
+                <span>Llamar</span>
             </div>}
             <div className='info-contact-secondary'>
                 <span className='info-contact-description'><HiOutlineChatBubbleBottomCenterText /> {user.description_content ? user.description_content : defaultData}</span>
@@ -34,8 +34,8 @@ const Profile = ({user, isOwner, urlToReturn}) => {
             </div>
             {
                 isOwner && 
-                <button onClick={() => navigate("/profile/modify")} className='info-profile-modify'>
-                    <span className='info-profile-call-text'>Modificar</span>
+                <button onClick={() => navigate("/profile/modify")} className='button-profile'>
+                    <span>Modificar</span>
                 </button >
             }
         </div> 

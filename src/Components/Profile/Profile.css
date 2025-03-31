@@ -58,39 +58,36 @@
     margin-bottom: 5px;
 }
 
+
+.button-profile {
+    background-color: #df78a3; 
+    color: white;
+    border: none;
+    border-radius: 8px; 
+    padding: 12px 15px; 
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 10px auto; 
+    display: block; 
+    width: 100%; 
+    max-width: 200px; 
+}
+
+.button-profile:hover {
+    background-color: #bb6689; 
+}
+
 .info-profile-call {
     display: flex;
+    color: white;
     align-items: center;
-    margin-bottom: 20px;
-    padding: 10px;
-    border: 1px solid #4d4d4d;
-    border-radius: 5px;
-    background-color: #ca8bb0;
-}
-
-.info-profile-modify {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    padding: 10px;
-    border: 1px solid #4d4d4d;
-    border-radius: 5px;
-    background-color:#f799d0;
-}
-
-.info-profile-modify:hover {
-    background-color: #f1c2de;
-}
-
-.info-profile-call-icon {
-    font-size: 24px;
-    color: #333;
-    margin-right: 10px;
-}
-
-.info-profile-call-text {
-    font-size: 16px;
-    color: #333;
+    font-size: 1rem;
+    margin: 10px auto; 
+    padding: 12px 15px; 
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #df78a3; 
 }
 
 .info-contact-secondary {
