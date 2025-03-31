@@ -5,7 +5,7 @@
     font-family: "Inter", sans-serif;
 }
 
-.not-found-contact {
+.not-found-contact-chat {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -16,19 +16,19 @@
     text-align: center;
 }
 
-.error-title {
+.error-title-chat {
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
-.error-image {
+.error-image-chat {
     width: 200px; 
     height: auto; 
     margin-bottom: 20px; 
 }
 
-.back-button {
+.back-button-chat {
     background-color: #df78a3; 
     color: white;
     border: none;
@@ -40,8 +40,9 @@
     display: block; 
     width: 100%; 
     max-width: 200px; 
-}
+}  
 
-.back-button:hover {
-    background-color:  #bb6689; 
+
+.back-button-chat:hover {
+    background-color:  #bb6689;  
 }

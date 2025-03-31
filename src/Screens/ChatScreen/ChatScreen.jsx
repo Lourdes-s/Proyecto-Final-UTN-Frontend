@@ -2,6 +2,7 @@ import React, { useEffect, useState, useCallback } from 'react'
 import { useParams } from 'react-router-dom'
 import { ChatHeaderInfo, ListaMensajes, MensajeForm } from '../../Components'
 import '../Screens.css'
+import './chat.css'
 
 const ChatScreen = () => {
     const {contactId} = useParams()
@@ -22,7 +23,7 @@ const ChatScreen = () => {
             const data = await responseHTTP.json()
             switch (responseHTTP.status) {
                 case 404:
-                    setError("No se encontro contacto")
+                    setError("Contacto no encontrado")
                     break;
                 case 200:
                     setContact({...data, "id": contactId})
@@ -90,9 +91,11 @@ const ChatScreen = () => {
     }
     if (error) {
         return (
-            <div style={{height:'100%'}}>
-                <h1>{error}</h1>
-            </div>
+            <div className="not-found-contact-chat">
+            <h1 className="error-title-chat">{error}</h1>
+            <img src="https://i.pinimg.com/736x/2d/15/7d/2d157de6280104b89b2b1505d2195934.jpg" alt="Error" className="error-image-chat" /> 
+            <button className="back-button-chat" onClick={() => window.history.back()}>Volver</button>
+        </div>
         )
     }
     return (
