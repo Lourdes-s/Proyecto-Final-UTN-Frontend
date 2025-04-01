@@ -63,11 +63,11 @@ const LoginScreen = () => {
                 setError(data.message)
                 break;
             case 404:
-                setError({email: [{message:"email incorrecto"}]})
+                setError({email: [{message:"el email proporcionado no esta registrado"}]})
                 break;
             case 401:
             case 403:
-                setError({password: [{message:"email o contraseña incorrecto"}]})
+                setError({password: [{message:"el email y la contraseña proporcionados no coinciden"}]})
                 break;
             case 200:
                 login(data.access_token, data.user.id)

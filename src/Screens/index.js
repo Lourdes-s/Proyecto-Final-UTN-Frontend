@@ -9,5 +9,6 @@ import NotFoundScreen from "./NotFoundScreen/NotFoundScreen"
 import ProfileScreen from "./ProfileScreen/ProfileScreen"
 import ContactScreen from "./ContactScreen/ContactScreen"
 import ModifyProfileScreen from "./ModifyProfileScreen/ModifyProfileScreen"
+import ContactAddScreen from "./ContactAddScreen/ContactAddScreen"
 
-export { LoginScreen, ForgotPasswordScreen, RecoveryPasswordScreen, RegisterScreen, ChatsScreen, ChatScreen, ValidateMailScreen, NotFoundScreen, ProfileScreen, ContactScreen, ModifyProfileScreen }              
+export { LoginScreen, ForgotPasswordScreen, RecoveryPasswordScreen, RegisterScreen, ChatsScreen, ChatScreen, ValidateMailScreen, NotFoundScreen, ProfileScreen, ContactScreen, ModifyProfileScreen, ContactAddScreen}              

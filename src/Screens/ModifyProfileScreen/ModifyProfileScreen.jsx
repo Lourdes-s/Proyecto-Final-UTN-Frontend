@@ -96,7 +96,6 @@ const ModifyProfileScreen = () => {
 
     const navigate  = useNavigate()
     const handleModify = async (formState) =>{
-        console.log(JSON.stringify(formState))
         const responseHTTP = await fetch(`${import.meta.env.VITE_API_URL}/api/user/${sessionStorage.getItem('user-id')}`,
             {
                 method: 'PUT',

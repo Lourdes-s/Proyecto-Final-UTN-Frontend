@@ -24,7 +24,7 @@ const ContactsHeader = ({setListaContactos}) => {
                 onChange={handleChangeValue}
                 value={searchStringState}
             />
-            <Link to="/profile" className='info-profile-icon'><IoMdPersonAdd /></Link>
+            <Link to="/contact/add" className='info-add-contact-icon'><IoMdPersonAdd /></Link>
             <Link to="/profile" className='info-profile-icon'><BsFillPersonVcardFill /></Link>
         </div>
     )

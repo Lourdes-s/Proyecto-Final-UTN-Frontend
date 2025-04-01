@@ -22,6 +22,12 @@
     margin-left: 10px;
 }
 
+.info-add-contact-icon {
+    font-size: 24px;
+    color: #333;
+    margin-left: 10px;
+}
+
 .contact-header-title {
     flex-grow: 1;
 }
