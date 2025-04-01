@@ -8,7 +8,7 @@
 }
 
 .info-profile-container {
-    width: 100%; /* Ocupará todo el ancho del "celular" */
+    width: 100%; 
     max-width: 100%;
     min-height: 100%;
     display: flex;
@@ -17,7 +17,7 @@
     padding: 20px;
     background-color: #fce7ef;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    overflow-y: auto; /* Permite el scroll si el contenido es más grande */
+    overflow-y: auto; 
 }
 
 .info-profile-volver {
