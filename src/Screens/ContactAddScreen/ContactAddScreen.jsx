@@ -39,27 +39,7 @@ const ContactAddScreen = () => {
             return;
         }
 
-    // Verificar si el correo electrónico pertenece a un usuario existente
-    const userCheckResponse = await fetch(`${import.meta.env.VITE_API_URL}/api/user/check-email`, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email: form_state.email })
-    });
-
-    if (userCheckResponse.status === 200) {
-        const userExists = await userCheckResponse.json();
-        if (!userExists) {
-            setError({ email: [{ message: "El correo electrónico no está registrado como usuario." }] });
-            return;
-        }
-    } else {
-        setError({ general: [{ message: "Error al verificar el usuario." }] });
-        return;
-    }
-
-        const responseHTTP = await fetch(`${import.meta.env.VITE_API_URL}/api/user/${sessionStorage.getItem('user-id')}`,
+        const responseHTTP = await fetch(`${import.meta.env.VITE_API_URL}/api/contact`,
             {
                 method: 'POST',
                 headers: {
@@ -75,7 +55,7 @@ const ContactAddScreen = () => {
                 setError(data.message)
                 break;
             case 404:
-                setError({email: [{message:"email incorrecto"}]})
+                setError({email: [{message:"El email proporcionado no esta registrado"}]})
                 break;
             case 500:
                 setError('Algo salio mal')
