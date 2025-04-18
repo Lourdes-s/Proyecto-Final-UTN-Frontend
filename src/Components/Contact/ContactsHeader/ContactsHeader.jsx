@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './ContactsHeader.css'
 import { BsFillPersonVcardFill } from "react-icons/bs";
-import { IoMdPersonAdd } from "react-icons/io";
+import { IoMdPersonAdd, IoMdSearch  } from "react-icons/io";
 import { Link } from 'react-router-dom';
 
 const ContactsHeader = ({setListaContactos}) => {
@@ -13,19 +13,31 @@ const ContactsHeader = ({setListaContactos}) => {
         setSearchString(e.target.value)
     }
 
+    const [showInput, setShowInput] = useState(false)
+
     return (
         <div className='contact-header-container'>
             <div className='contact-header-title'>
                 <h2 className='contacts-header-contact'>Contactos</h2>
             </div>
-            <input
+            {showInput ? (
+                <input
                 className='input-filter'
                 placeholder='Buscar contacto'
                 onChange={handleChangeValue}
                 value={searchStringState}
-            />
-            <Link to="/contact/add" className='info-add-contact-icon'><IoMdPersonAdd /></Link>
-            <Link to="/profile" className='info-profile-icon'><BsFillPersonVcardFill /></Link>
+                onBlur={() => setShowInput(false)} // opcional: cerrar si hace blur
+                autoFocus
+                />
+            ) : (
+                <button className='search-icon-btn' onClick={() => setShowInput(true)}>
+                <IoMdSearch />
+                </button>
+            )}
+            <div className='contact-icons'>
+                    <Link to="/contact/add" className='info-add-contact-icon'><IoMdPersonAdd /></Link>
+                    <Link to="/profile" className='info-profile-icon'><BsFillPersonVcardFill /></Link>
+            </div>
         </div>
     )
 }

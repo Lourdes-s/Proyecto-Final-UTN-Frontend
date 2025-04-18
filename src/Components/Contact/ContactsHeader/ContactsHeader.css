@@ -10,10 +10,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
+    padding: 5px 10px;
     background-color: #fce7ef;
     border-bottom: 1px solid #ccc;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden; 
 }
 
 .info-profile-icon {
@@ -33,18 +34,28 @@
 }
 
 .contacts-header-contact {
-    font-size: 2rem;
+    font-size: 1.3rem;
     color: #333;
-    margin: 0;
+}
+
+.search-icon-btn {
+    background: none;
+    border: none;
+    font-size: 22px;
+    color: #333;
+    cursor: pointer;
+    margin-left: 8px;
 }
 
 .input-filter {
-    width: 170px;
     height: 30px;
-    padding: 10px;
+    padding: 6px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 14px;
+    flex-grow: 1;
+    margin-left: 10px;
+    max-width: 70%;
 }
 
 .input-filter::placeholder {
@@ -54,6 +65,17 @@
 .input-filter:focus {
     border-color: #aaa;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.info-add-contact-icon,
+.info-profile-icon {
+    font-size: 22px;
+    color: #333;
 }
 
 /*-------------------------------------------------------------MEDIAQUERIES------------------------------------------------------------- */
