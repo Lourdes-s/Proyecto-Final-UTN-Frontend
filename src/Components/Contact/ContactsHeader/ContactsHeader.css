@@ -85,6 +85,10 @@
         padding: 15px;
     }
 
+    .contacts-header-contact {
+        font-size: 1.8rem;
+    }
+
     .contact-header-title {
         font-size: 20px;
     }
@@ -92,6 +96,12 @@
     .input-filter {
         width: 220px;
         height: 35px;
+    }
+
+    .info-add-contact-icon,
+    .info-profile-icon,
+    .search-icon-btn {
+        font-size: 26px;
     }
 }
 
@@ -104,9 +114,19 @@
         font-size: 22px;
     }
 
+    .contacts-header-contact {
+        font-size: 2rem;
+    }
+
     .input-filter {
         width: 280px;
         height: 40px;
+    }
+
+    .info-add-contact-icon,
+    .info-profile-icon,
+    .search-icon-btn {
+        font-size: 30px;
     }
 }
 
@@ -119,8 +139,18 @@
         font-size: 26px;
     }
 
+    .contacts-header-contact {
+        font-size: 2.5rem;
+    }
+
     .input-filter {
         width: 350px;
         height: 45px;
+    }
+
+    .info-add-contact-icon,
+    .info-profile-icon,
+    .search-icon-btn {
+        font-size: 36px;
     }
 }
